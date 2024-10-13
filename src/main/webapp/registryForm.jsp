@@ -29,6 +29,13 @@
         <sx:datetimepicker id="dateFrom" name="invoiceBean.dateFrom"/>
       </td>
     </tr>
+    <tr>
+      <td class="evenRow">
+          <s:fielderror fieldName = "invoiceBean.grossAmount" />
+          <s:text name="form.grossAmount.message"/> <!-- Mensaje para el importe bruto -->
+          <s:textfield id="grossAmount" name="invoiceBean.grossAmount"/> <!-- Campo para el importe bruto -->
+      </td>
+  </tr>
   <tr>
     <td class="evenRow">
        <s:text name="form.toDate.message"/>

@@ -25,5 +25,14 @@ public class InvoiceAction extends ActionSupport  {
         if (invoiceBean.getSubject().isEmpty()) {
             addFieldError("invoiceBean.subject", "El concepto es obligatorio.");
         }
+
+        if (invoiceBean.getGrossAmount() <= 0) {
+            addFieldError("invoiceBean.grossAmount", "El importe bruto debe ser mayor que cero.");
+        }
     }
+
+    public double totalWithIVA() {
+        return invoiceBean.getGrossAmount() * 1.21; // Calcula el total con IVA del 21%
+    }
+
 }
